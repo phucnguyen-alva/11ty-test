@@ -1,0 +1,10 @@
+---
+layout: layout.liquid
+pagination:
+  data: jeffs
+  size: 1
+  alias: jeff
+permalink: "jeffs/{{ jeff.name | slugify }}/"
+---
+
+{{ jeff.name }} is {{ jeff.age }} years old
