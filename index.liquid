@@ -1,8 +1,16 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate Jeff
+title: "Random Name Generator"
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
-<p>{% year %}</p>
+<div x-data="{ 
+        names: ['Ibrahim', 'Luke', 'Sahana', 'Chloe', 'Connor', 'Dylan', 'Patrick', 'Richard', 'Michael', 'Trevor', 
+                'Harley', 'Adi', 'Ting', 'Meri', 'Joshua', 'Aaron', 'Alva', 'Jason', 'Jose', 'Jamil', 
+                'Jeffrey', 'Navya', 'Gabrielle', 'Nathan', 'Demo'], 
+        randomName: 'Click the button to generate a name'
+    }">
+    <h1 x-text="randomName"></h1>
+    <button @click="randomName = names[Math.floor(Math.random() * names.length)]">
+        Generate Random Name
+    </button>
+</div>
